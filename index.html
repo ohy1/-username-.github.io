@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" async="" src="./dat/js/ga.js"></script>
+
+<title>inscius</title>
+
+<link href="/css/core.css" rel="stylesheet">
+<link href="/css/animate.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/modernizr.custom.js"></script>
+<script src="/js/plugins.min.js"></script>
+<script src="/js/main.js"></script>
+
+<style>@font-face{font-family:Pompadur;src:url(./dat/font/font.eot);src:local(pompadur),url(./dat/font/font.ttf);}h1{font-family:Pompadur,'Comic Sans MS',cursive;}</style>
+
+<script>
+	document.onkeydown = function(e) { 
+	if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly. 
+	} 
+	return false; 
+	}; 
+</script>
+<script> 
+	function click() { 
+	if (event.button==2||event.button==3) { 
+	oncontextmenu='return false'; 
+	} 
+	} 
+	document.onmousedown=click 
+	document.oncontextmenu = new Function("return false;") 
+</script>
+<script>
+	function disableWheelScroll(){
+	if (document.body.addEventListener) document.body.addEventListener('DOMMouseScroll', blockWheel, false);
+	document.body.onmousewheel = blockWheel;
+	}
+	function blockWheel(event){
+	if (!event) event = window.event;
+	if (event.stopPropagation) event.stopPropagation();
+	else event.cancelBubble = true;
+	if(event.preventDefault) event.preventDefault();
+	else event.returnValue = false;
+	}
+	disableWheelScroll();
+</script>
+<script> 
+$(function() { 
+var title = document.title, 
+animSeq = ["/", "$", "\\", "|", "$"], 
+animIndex = 0, 
+titleIndex = 0; 
+function doInverseSpinZeroPitch() { 
+var loadTitle = title.substring(0, titleIndex); 
+if (titleIndex > title.length) { 
+animIndex = 0; 
+titleIndex = 0 
+} 
+if (animIndex > 3) { 
+titleIndex++; 
+animIndex = 0 
+} 
+document.title = loadTitle + animSeq[animIndex]; 
+animIndex++ 
+} 
+window.setInterval(doInverseSpinZeroPitch, 250); 
+}); 
+</script>
+
+</head>
+<body onmousedown="return false" onselectstart="return false">
+<style>body{overflow:hidden}</style>
+<script>disableWheelScroll();</script>
+<div id="star" class="video mask overlay">
+<div class="video-fallback"></div>
+<video id="vid1" preload="auto" autoplay="" loop="">
+	<source src="/video/123.mp4" type="video/mp4">
+</video>
+<canvas class="cover"></canvas>
+</div>
+<div class="pageoverlay">
+	<div class="bg-animation">
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div id="stars4"></div>
+</div>
+<div class="lightbox">
+<div class="awrapper">
+<div class="titles fadeInDown">
+<h1><font color="Red">i</font><font>n<font color="Red">s</font><font>c</font><font color="Red">i</font><font>u<font color="Red">s</font><font><font color="Red"></font>
+</div>
+<div class="media fadeInUp">
+<a href="http://steamcommunity.com/id/ohy1/" target="_blank">
+<i class="fa fa-steam"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</html>
